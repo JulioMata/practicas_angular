@@ -1,0 +1,35 @@
+<h1>Practica 2 Works!!</h1>
+<h3><p> Concepcion no me castigues :'v</p></h3>
+ <div class="main content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-header">TABLA</div>
+                    <Table class="table">
+                        <tr *ngFor="let tabla of tablas">
+                            <td>
+                                <p>{{tabla}}</p>
+                            </td>
+                        </tr>
+                    </Table>
+                    <button (click)="mostrar=!mostrar"class="btn btn-primary btn-block">Mostra/Ocultar resultados</button>
+                </div>
+            </div>
+            <div class="col-3">
+                <div *ngIf="mostrar" class="col-md-2">
+                  <div class="card text-center">
+                    <div class="card-header"><b> RESULTADO</b></div>
+                     <Table class="table">
+                        <tr *ngFor="let result of resultados">
+                            <td>
+                                <p>{{result}}</p>
+                            </td>
+                        </tr>
+                    </Table>                    
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
